@@ -1,5 +1,5 @@
 class TubuyakisController < ApplicationController
-  before_action :set_tubuyaki, only: [:edit,:destroy,:update]
+  before_action :set_tubuyaki, only: [:edit,:destroy,:update,:show]
 
   def index
     @tubuyaki = Tubuyaki.all
@@ -18,6 +18,10 @@ class TubuyakisController < ApplicationController
     end
   end
 
+  def show
+
+  end
+
   def edit
     @tubuyaki = Tubuyaki.find(params[:id])
   end
@@ -29,6 +33,7 @@ class TubuyakisController < ApplicationController
       render 'edit'
     end
   end
+
 
   def destroy
     @tubuyaki = Tubuyaki.find(params[:id])

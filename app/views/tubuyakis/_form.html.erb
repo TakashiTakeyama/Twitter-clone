@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <header>
+      <%= image_tag('japan.jpg') %>
+    </header>
+    <div class="maine-contents">
+      <%= form_with(model: @tubuyaki, local: true) do |form| %>
+        <% if @tubuyaki.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= @tubuyaki.errors.count %>件のエラーがあります。</h2>
+            <ul>
+              <% @tubuyaki.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <div class="tubuyaki_title" %>
+          <%= form.text_field :content %>
+        </div>
+        <%= form.submit("つぶやく")%>
+        <br><%= link_to "つぶやき一覧をみる", tubuyakis_path %>
+      <% end %>
+    </div>
+    <footer class="footer">
+      <p>Copyright © 2019 TAKEYAMA INC All RIGHTS RESERVED.</p>
+    </footer>
+  </body>
+</html>
+
