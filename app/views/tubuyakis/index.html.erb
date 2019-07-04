@@ -6,7 +6,8 @@
     <br>
       <li>
         <%= tubuyaki.content %>
-        <br><%= link_to 'つぶやきを消す。', tubuyaki_path(tubuyaki.id), method: :delete %></li>
+        <br><%= link_to 'つぶやきを編集する。', tubuyaki_path(tubuyaki.id) %>
+        <br><%= link_to 'つぶやきを消す。', tubuyaki_path(tubuyaki.id), method: :delete %>
       </li>
     </ul>
   <% end %>
