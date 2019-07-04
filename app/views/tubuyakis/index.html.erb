@@ -1,0 +1,13 @@
+<h3>つぶやき一覧
+  <br><%= link_to '何かつぶやく', new_tubuyaki_path %>
+</h3>
+<div class="contents">
+  <% @tubuyaki.each do |tubuyaki| %>
+    <br>
+      <li>
+        <%= tubuyaki.content %>
+        <br><%= link_to 'つぶやきを消す。', tubuyaki_path(tubuyaki.id), method: :delete %></li>
+      </li>
+    </ul>
+  <% end %>
+</div>
