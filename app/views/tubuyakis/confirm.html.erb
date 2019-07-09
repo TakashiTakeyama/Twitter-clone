@@ -1,0 +1,8 @@
+<h3>以下の内容で、送信する。</h3>
+
+<%= form_with(model: @tubuyaki, url: tubuyakis_path, local: true) do |form| %>
+  <%= form.hidden_field :content %>
+
+  <p>本文:<%= @tubuyaki.content %></p>
+  <%= form.submit  "つぶやく" %>
+<% end %>

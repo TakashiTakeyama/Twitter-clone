@@ -22,6 +22,10 @@ class TubuyakisController < ApplicationController
 
   end
 
+  def confirm
+    @tubuyaki = Tubuyaki.new(tubuyaki_params)
+  end
+
   def edit
     @tubuyaki = Tubuyaki.find(params[:id])
   end

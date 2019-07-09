@@ -3,7 +3,7 @@
     <header>
       <%= image_tag('japan.jpg') %>
     </header>
-    <div class="maine-contents">
+    <div class="main-contents">
       <%= form_with(model: @tubuyaki, local: true) do |form| %>
         <% if @tubuyaki.errors.any? %>
           <div id="error_explanation">
